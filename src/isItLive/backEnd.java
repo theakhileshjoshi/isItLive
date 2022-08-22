@@ -14,7 +14,7 @@ public class backEnd {
 		HttpURLConnection connection = null;
 		try {
 
-	        u = new URL("https://www.saritaindustries.in");
+	       // u = new URL("https://www.saritaindustries.in");
 
 	        connection = (HttpURLConnection) u.openConnection();
 

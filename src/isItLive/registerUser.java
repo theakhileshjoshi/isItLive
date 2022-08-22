@@ -148,10 +148,19 @@ public class registerUser {
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				try {
+					if(userURL.getText().startsWith("https://")) {
+						
+					}
+					
 					URI uri = new URI(userURL.getText());
 					URL url = uri.toURL();
 					int response = be.tryConnection(url);
-					if(response == 200)status.setText("Website is Live!!");
+					if(response == 200) {
+						status.setText("Website is Live!!");
+					}else {
+						status.setText("Website is not Live!!");
+					}
+					
 				} catch (Exception e1) {
 					// TODO Auto-generated catch block
 					status.setText("Something's wrong with the URL");
